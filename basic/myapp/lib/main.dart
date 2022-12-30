@@ -36,6 +36,22 @@ void main() {
   cars = cars.where((car) => car.name !='VinFast-luxury4').toList();
   //how to get a list of name ? use 'map'
   List<String> names=cars.map((car) => car.name).toList();
+  //final and const
+  //can change item in list
+  //can not change item in list
+  final List<int> someNumber = [1,2,3,4,5];
+  // someNumber.add(6);//can add more items to final
+  // someNumber[1]=99; //can change items value in a list(final)
+  // print(someNumber);
+  List<int> someNumber2 = someNumber;
+  someNumber2.add(20);
+  // print(someNumber2);
+  Map<String,dynamic> personA = Map();//key:string , value: dynamic
+  personA['name'] ='Huy';
+  personA['age'] = 20;
+  Map<double,double> point = Map();//key double,value:double
+  point[2.0]=9; //x=2.0 ,y=9
+  point[3.0]=7;
   runApp(
       Center(child: Text(
           names.toString(),
